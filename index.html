@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body style="background-color:#FEE3D4">
+
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Belly Buttons: Secret Umami? <small>Microbiologists Weigh In</small></h3>
+          </div>
+          <div class="col-md-8">
+            <p>
+              Does the bacteria in our Belly Buttons hold the key to Beef flavored Umami? For decades, microbiologists have tried to understand if the natural beef flavor can be replicated through other means. Now, thanks to research generously funded by Probable Beef, Rosa is trying to understand if Belly Buttons in humans carry a bacteria which can synthesize proteins to replicate the natural beef flavor.<br><br>The human body is the source of thousands of types of species of bacteria. The ones found in the gut are not the same species that are found on the persons eye-lashes. Further, within individuals, the bacterial species can vary even in the same location. Rosa hypothesizes that the ideal bacterial species to make synthetic beef may be found in the belly button of a human being.<br><br>To test the hypothesis, Rosa has gathered and analyzed the data of bacterial species of thousands of persons across the country. So what do YOU think? Does bacteria found in belly buttons hold the key to the elusive beef flavor? Dig through the data yourself, and let us know what you see.
+
+
+            </p>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
